@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./pay.css">
+    <title>Payment Processing</title>
+</head>
+
+<body>
+    <nav><a href="../directory/directory.html">Directory</a></nav>
+    <nav><a href="../index.html">Home</a></nav>
+    <div id="payment_options">
+        <form class="row ms-form-group" id="card-form">
+            <div>
+                <label for="card-number">Card Number</label>
+                <div class="div_input" type="text" id="card-number"></div>
+            </div>              
+            <div class="col-md mb-2">
+                <label for="expiration-date">Expiration Date</label>
+                <div id="expiration-date" class="div_input"></div>
+            </div>
+            <div class="col-md mb-2">
+                <label for="cvv">Security Code</label>
+                <div id="cv" class="div input"> </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input value placeholder="username@email.com" type="email" id="email" class="div_input" required>
+                </div>
+                <div><input class="ms-fullwidth mt-2 ms-medium" type="submit" value="Purchase"></div>
+        </form>
+        <hr>
+        <hr>
+    </div>
+    <section>
+        <article>
+            <b>PayPal privacy notice:</b><hr> "By paying with your card, you acknowledge that your data will be processed by PayPal
+            subject to the PayPal Privacy Statement available at PayPal.com."
+        </article>
+
+        <article>"We use PayPal for payments and other services. If you wish to use one of these services and pay on our
+            website, PayPal may collect the personal data you provide, such as payment and other identifying
+            information. PayPal uses this information to operate and improve the services it provides to us and others,
+            including for fraud detection, harm and loss prevention, authentication, analytics related to the
+            performance of its services, and to comply with applicable legal requirements. The processing of this
+            information will be subject to the PayPal Privacy Statement available at PayPal.com."</article>
+    </section>
+</body>
+
+</html>

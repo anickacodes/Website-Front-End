@@ -1,0 +1,12 @@
+{
+  "name": "mod2-project-redo",
+  "version": "1.0.0",
+  "description": "Draft 2 of website build",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Anicka Lewis",
+  "license": "ISC"
+}

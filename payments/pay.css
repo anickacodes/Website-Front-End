@@ -1,0 +1,13 @@
+.container {
+    width: 650px;
+    height: auto;
+}
+.section {
+    float: right;
+}
+.article {
+    float: left;
+}
+h1 {
+    color: green;
+}

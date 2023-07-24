@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   const occupationInput = document.getElementById("occupation");
   const nameInput = document.getElementById("name");
   const switchInput = document.querySelector(".switch input");
-  const formSubmission = document.querySelector(".create-client");
+  const formSubmission = document.querySelector(".create-style");
   const clearBtn = document.getElementById("create");
   const imageSelector = document.querySelector(".dropdown");
 
@@ -26,7 +26,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
     divForNewUserCard.classList.add("client-info");
     //2nd
     const imgForNewUserCard = document.createElement("img");
-    imgForNewUserCard.src = "./assets/new_default.jpeg";
+
+    //if it's not inputwhat is it?
+    imgForNewUserCard.src = input.img.type.value || "assets/cnl.jpeg";
+
     imgForNewUserCard.setAttribute("width", "17%");
     divForNewUserCard.append(imgForNewUserCard);
     //3rd
@@ -34,9 +37,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
     h2forNewUserName.innerText = event.target.name.value;
     divForNewUserCard.append(h2forNewUserName);
     //4th
-    const pTagForNewUserBeforeImg = document.createElement("p");
-    pTagForNewUserBeforeImg.innerText = event.target.occupation.value;
-    divForNewUserCard.append(pTagForNewUserBeforeImg);
+    // const pTagForNewUserBeforeImg = document.createElement("p");
+    // pTagForNewUserBeforeImg.innerText = event.target.occupation.value;
+    // divForNewUserCard.append(pTagForNewUserBeforeImg);
     //5th
     const formForNewUserCard = document.createElement("form");
     const legendForNewUserCard = document.createElement("legend");
@@ -61,7 +64,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     divForNewUserRadioBtn.append(ptagforradiobtnfornewuser);
     //8th
     const resetBtnForNewUserCard = document.createElement("button");
-    resetBtnForNewUserCard.innerText = "Remove Client";
+    resetBtnForNewUserCard.innerText = "Remove Style";
     // resetBtnForNewUserCard.addEventListener("click", (event) => {
     //   event.preventDefault();
     //   const confirmDelete = confirm(
@@ -91,8 +94,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
   function clearInputs() {
     switchInput.checked = false;
     nameInput.value = "";
-    occupationInput.value = "";
-    imageSelector.value = "default";
+    // occupationInput.value = "";
+    // imageSelector.value = "default";
   }
   const allNewClientSection = document.querySelector(".client");
 
@@ -102,7 +105,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     if (
       targetElement.tagName === "BUTTON" &&
-      targetElement.innerText === "Remove Client"
+      targetElement.innerText === "Remove Style"
     ) {
       // Find closest client profile card to button
       const clientCard = targetElement.closest(".client-info");
@@ -151,7 +154,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     "input[type='reset']"
   );
   resetButtons.forEach((button) => {
-    button.value = "Remove Client";
+    button.value = "Remove Style";
     button.addEventListener("click", (event) => {
       const confirmDelete = confirm(
         "Are you sure you want to delete this client profile?"
@@ -172,14 +175,14 @@ function editClientHandler(event) {
   const clientOccupation = clientInfo.querySelector(".client-occupation");
 }
 
-const url = 'https://bitcoin-qr-generator.p.rapidapi.com/?address=1BtS4rSSi12RZcNY79q7hWEUSw2L5Ach5G&amount=0.0001';
-const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': 'b89fb8faa9msh40a677f6078ef48p1f0f40jsnb7ca42e40fb0',
-		'X-RapidAPI-Host': 'bitcoin-qr-generator.p.rapidapi.com'
-	}
-};
+// const url = 'https://bitcoin-qr-generator.p.rapidapi.com/?address=1BtS4rSSi12RZcNY79q7hWEUSw2L5Ach5G&amount=0.0001';
+// const options = {
+// 	method: 'GET',
+// 	headers: {
+// 		'X-RapidAPI-Key': 'b89fb8faa9msh40a677f6078ef48p1f0f40jsnb7ca42e40fb0',
+// 		'X-RapidAPI-Host': 'bitcoin-qr-generator.p.rapidapi.com'
+// 	}
+// };
 
-fetch(url, options).then((response)=> response.json())
-.then((joy) => console.log(joy))
+// fetch(url, options).then((response)=> response.json())
+// .then((joy) => console.log(joy))

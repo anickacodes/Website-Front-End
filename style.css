@@ -1,9 +1,15 @@
 * {
     margin: 0;
     padding: 0;
-    
+
 }
 
+
+body {
+    background-color: rgba(187, 187, 213, 0.925);
+    font-family: 'Roboto', sans-serif;
+    /* height: 100% */
+}
 
 .whole-page {
     display: flex;
@@ -13,19 +19,14 @@
     min-height: calc(100% - 11px);
 }
 
-body {
-    background-color:rgba(23, 23, 121, 0.736);
-    font-family: 'Roboto', sans-serif;
-    height: 100%
-}
 
 .footer {
-    height: 11px;
+    height: 1%;
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #6340ff;
+    background-color: #cd4404ed;
 
 }
 
@@ -35,22 +36,23 @@ body {
 }
 
 h1 {
-    font-size: 32px;
+    margin: 33px;
+    border: 2px solid white;
+    font-size: 33px;
     text-align: center;
     padding: 20px;
 }
 
 #new-1 {
-    margin: 7px; 
-    padding: 0px;
+    margin: 11px;
     font-size: 25px;
-   
-    border-color: #f5d8d8
+
+    border-color: #3e0a0a
 }
 
 label {
 
-    border-style: dotted;
+    border: 5px dashed green;
     font-size: 20px;
 }
 
@@ -59,36 +61,36 @@ label {
     text-align: center;
     margin:
         97px 12px 30px 140px;
-    width: 333px;
-    height: 600px;
+    /* width: 333px;
+    height: 600px; */
     padding: 21px;
     border: 7px outset rgba(19, 92, 92, 0.828);
     border-radius: 1.2em;
     background-color: #4242ea
 }
 
-.all-new-clients {
+/* .all-new-clients {
   margin: auto;
-}
+} */
 
 fieldset {
-    border-color: rgb(69, 69, 106);
-    width: auto;
-    height: auto;
+    border-color: rgb(212, 212, 235);
+    /* width: auto;
+    height: auto; */
 }
 
 .clients-container {
-    position: relative;
+    /* position: relative;
     top: 50px;
     right: 11%;
-    width: 500px;
+     */
+    /* width: auto;
     height: auto;
-    margin: auto;
+    margin: auto; */
     background-color: rgba(253, 180, 9, 0.455);
-    border: 8px outset rgba(19, 92, 92, 0.828);
+    border: 4px inset rgba(19, 92, 92, 0.828);
     border-radius: 1em;
     text-align: center;
-
 }
 
 h2 {
@@ -113,6 +115,7 @@ h2 {
 
 .slider {
     position: absolute;
+
     cursor: pointer;
     top: 0;
     left: 0;
@@ -125,18 +128,21 @@ h2 {
 
 .slider:before {
     position: absolute;
-    content: "Active";
-    height: 23px;
-    width: 23px;
+    content: "Not Offered";
+    height: fit-content;
+    width: fit-content;
     left: 3px;
     bottom: 3px;
     background-color: white;
-    -webkit-transition: .4s;
     transition: .4s;
 }
 
+/* .slider:after {
+    content: offered;
+} */
+
 input:checked+.slider {
-   
+
     background-color: #082136;
 }
 
@@ -185,10 +191,10 @@ input:checked+.slider:before {
 
 legend {
     color: white;
-    background-color: rgba(108, 62, 72, 0.913);
-    padding: 6px;
+    background-color: rgba(228, 86, 5, 0.857);
+    padding: 7.4px;
     border-radius: 2px;
-    border: 0;
+    border: 2.2px solid blue;
     font-size: 16px;
 }
 
@@ -207,4 +213,4 @@ legend {
     .clients-container {
         order: 1;
     }
-} 
+}
